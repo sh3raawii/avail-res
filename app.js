@@ -1,6 +1,6 @@
 const express = require('express')
 const compression = require('compression')
-const { logger } = require('./lib/utils')
+const { logger, loggerMiddleware } = require('./lib/utils')
 
 // Configure express app
 logger.debug('Setting up express app')
@@ -12,6 +12,9 @@ logger.debug('Setting up middlewares')
 app.use(compression())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+// Custom Middlewares
+app.use(loggerMiddleware)
 
 // Routes
 logger.debug('Mounting routes')
