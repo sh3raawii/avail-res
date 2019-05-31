@@ -20,5 +20,7 @@ app.use(loggerMiddleware)
 logger.debug('Mounting routes')
 logger.debug('Mounting health check routes')
 app.use('/health', require('./routes/health'))
+logger.debug('Mounting restaurants endpoints')
+app.use('/restaurant', require('./routes/restaurants'))
 
 module.exports = app
