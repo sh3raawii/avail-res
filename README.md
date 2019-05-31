@@ -9,6 +9,12 @@ Using [yarn](https://yarnpkg.com/en/)
 $ yarn
 ```
 
+## Start server
+
+```Shell
+$ yarn start
+```
+
 ## API 
 
 ### Health
